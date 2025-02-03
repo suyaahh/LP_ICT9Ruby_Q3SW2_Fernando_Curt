@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Calculator </title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";; rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+	
+
+	<style>
+
+	div{
+			margin: auto;
+			width: 1000px;
+			height: 900px;
+			border: 3px solid black;
+			padding: 10px;
+			text-align: ;
+			background-color: slategray;
+
+
+			box-sizing: border-box;
+			align-self: right;
+		}
+
+		button {
+			align-content: center;
+		}
+
+		
+</style>
+
+
+
+
+
+	<div class="col-md-6 mt-5">
+
+		<img src="calcuu.jpg" alt="Money" height="200px" width="250px">
+		<h3> Hi, my name is Calckyy and I am here to help you with whatever value of answer you need to solve!</h3>
+
+
+		<br>
+
+		<h3> Given: </h3>
+		<form>
+			<label> Enter value a:</label> <input type="number" id="num1" class="form-control" placeholder="input here...">
+			<br>
+			<label> Enter value b:</label> <input type="number" id="num2" class="form-control" placeholder="input here...">
+			<br>
+
+			<a href="index.html"><button class="btn btn-primary"> Refresh </button></a>
+
+			<br>
+			<br>
+
+			<span class="form-control"> <h1 id="Result"> RESULT </h1> </span>
+			<br>
+
+
+			<button type="Submit" class="btn btn-success" onmouseover="product()"> product of a and b </button>
+			<br>
+			<br>
+
+			<button type="Submit" class="btn btn-warning" onmouseover="remainder()"> remainder of a and b </button>
+
+			<button type="Submit" class="btn btn-danger" onmouseover="exponent()"> a raise to b </button>
+
+		
+           <button type="Submit" class="btn btn-info" onmouseover="equal()"> answer if a is equal to b </button>
+
+
+			<br>
+			<br>
+
+			<details ontoggle="message()">
+			<summary> Instructions </summary>
+			<i> Enter two numbers then find its answer.</i>
+		</details>
+
+		</form>
+		<script>
+			function product(){
+				var num1 = document.getElementById("num1").value;
+				var num2 = document.getElementById("num2").value;
+				var product = Number(num1) * Number(num2);
+
+				document.getElementById('Result').innerHTML= 'Answer is' + ' ' + product;
+			}
+
+			function remainder(){
+				var num1 = document.getElementById("num1").value;
+				var num2 = document.getElementById("num2").value;
+				var remainder = Number(num1) % Number(num2);
+
+				document.getElementById('Result').innerHTML= 'Answer is' + ' ' + remainder;
+			}
+
+			function exponent(){
+				var num1 = document.getElementById("num1").value;
+				var num2 = document.getElementById("num2").value;
+				var exponent = Number(num1) ** Number(num2);
+
+				document.getElementById('Result').innerHTML= 'Answer is' + ' ' + exponent;
+			}
+
+			function equal(){
+				var num1 = document.getElementById("num1").value;
+				var num2 = document.getElementById("num2").value;
+				var equal = Number(num1) == Number(num2);
+
+				document.getElementById('Result').innerHTML= 'Answer is' + ' ' + equal;
+			}
+
+
+			
+		</script>
+	</div>
+
+
+
+</body>
+</html>
